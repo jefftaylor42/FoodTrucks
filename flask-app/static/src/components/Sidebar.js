@@ -120,14 +120,12 @@ var Sidebar = React.createClass({
     }
   },
   handleSearch(e) {
-      e.preventDefault();
-      this.fetchResults();
+    e.preventDefault();
   },
   onChange(e) {
       this.setState({query: e.target.value});
   },
   handleHover(vendorName) {
-      console.log("here");
       this.plotOnMap(vendorName);
   },
   render() {
@@ -160,7 +158,6 @@ var Sidebar = React.createClass({
           <form onSubmit={this.handleSearch}>
             <input type="text" value={query} onChange={this.onChange}
                     placeholder="Burgers, Tacos or Wraps?"/>
-            <button>Search!</button>
           </form>
         </div>
         { resultsCount > 0 ?

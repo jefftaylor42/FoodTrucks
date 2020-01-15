@@ -91,18 +91,11 @@ div#search-area {
     border-bottom: 1px solid #444444;
 }
 
-div#search-area input, 
-div#search-area button {
+div#search-area input {
     padding: 10px 8px;
     border: none;
-}
-div#search-area input {
-    width: 195px;
-}
-div#search-area button {
-    background: #FDED39;
-    font-weight: 600;
-    text-transform: uppercase;
+    width: 290px;
+    text-align: center;
 }
 
 div#results-area {
