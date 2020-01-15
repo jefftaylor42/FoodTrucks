@@ -93,7 +93,8 @@ def search():
                 "hours"    : r["_source"].get("dayshours", "NA"),
                 "schedule" : r["_source"].get("schedule", "NA"),
                 "address"  : r["_source"].get("address", "NA"),
-                "location" : r["_source"]["location"]
+                "location" : [r["_source"]["longitude"],
+                              r["_source"]["latitude"]]
             }
             fooditems[applicant] = r["_source"]["fooditems"]
             temp[applicant].append(truck)

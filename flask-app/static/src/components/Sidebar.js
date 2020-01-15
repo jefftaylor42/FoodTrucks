@@ -42,8 +42,7 @@ var Sidebar = React.createClass({
           },
           "geometry": {
             "type": "Point",
-            "coordinates": [parseFloat(p.location.longitude), 
-                            parseFloat(p.location.latitude)]
+            "coordinates": p.location
           }
         }
       })
