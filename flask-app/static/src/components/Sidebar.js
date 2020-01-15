@@ -10,8 +10,7 @@ var Sidebar = React.createClass({
       query: "", 
     }
   },
-  fetchResults() {
-    var results = [], query = this.state.query;
+  fetchResults(query) {
     request
       .get('/search?q=' +  query)
       .end(function(err, res) {
@@ -121,7 +120,8 @@ var Sidebar = React.createClass({
     e.preventDefault();
   },
   onChange(e) {
-      this.setState({query: e.target.value});
+    this.setState({query: e.target.value});
+    this.fetchResults(e.target.value);
   },
   handleHover(vendorName) {
       this.plotOnMap(vendorName);
