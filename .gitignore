@@ -4,3 +4,6 @@ venv
 .DS_Store
 elasticsearch
 *.pem
+flask-app/package-lock.json
+flask-app/static/build/
+
