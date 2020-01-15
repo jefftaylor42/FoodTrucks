@@ -74,8 +74,10 @@ def search():
         res = es.search(
                 index="sfdata",
                 body={
-                    "query": {"match": {"fooditems": key}},
-                    "size": 750 # max document size
+                    "query": {"regexp": {"fooditems":
+                        '.*' + key.lower() + '.*'
+                    }},
+                    "size": 750, # max document size
               })
     except Exception as e:
         return jsonify({
