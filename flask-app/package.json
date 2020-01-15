@@ -11,8 +11,8 @@
   "author": "Prakhar Srivastav",
   "license": "MIT",
   "dependencies": {
-    "react": "^0.14.5",
-    "react-dom": "^0.14.5",
+    "react": "^15.6",
+    "react-dom": "^15.6",
     "superagent": "^1.6.1"
   },
   "devDependencies": {
