@@ -8,7 +8,6 @@ var Sidebar = React.createClass({
     return { 
       results: [], 
       query: "", 
-      firstLoad: true
     }
   },
   fetchResults() {
@@ -22,7 +21,6 @@ var Sidebar = React.createClass({
         else {
           this.setState({ 
             results: res.body,
-            firstLoad: false
           });
           this.plotOnMap();
         }
@@ -129,21 +127,6 @@ var Sidebar = React.createClass({
       this.plotOnMap(vendorName);
   },
   render() {
-    if (this.state.firstLoad) {
-      return ( 
-        <div>
-          <div id="search-area">
-            <form onSubmit={this.handleSearch}>
-              <input type="text" value={query} onChange={this.onChange}
-                      placeholder="Burgers, Tacos or Wraps?"/>
-              <button>Search!</button>
-            </form>
-          </div>
-          <Intro />
-        </div>
-      );
-    }
-
     var query = this.state.query;
     var resultsCount = this.state.results.hits || 0;
     var locationsCount = this.state.results.locations || 0;
